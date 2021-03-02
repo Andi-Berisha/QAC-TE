@@ -10,7 +10,8 @@
             "17:50",
             "18:30",
             "21:25"
-        ]
+        ],
+        "Poster": "https://i.imgur.com/VmLLlbK.jpg"
     },
     {
         "Title": "Guardians of the Galaxy",
@@ -23,7 +24,8 @@
             "19:45",
             "21:30",
             "16:00"
-        ]
+        ],
+        "Poster": "https://i.imgur.com/grRtRHs.jpg"
     },
     {
         "Title": "Up",
@@ -36,7 +38,8 @@
             "14:20",
             "17:30",
             "20:40"
-        ]
+        ],
+        "Poster": "https://i.imgur.com/4LN7A1G.jpg"
     },
     {
         "Title": "Thor: Ragnarok",
@@ -49,7 +52,8 @@
             "15:20",
             "19:30",
             "21:00"
-        ]
+        ],
+        "Poster": "https://i.imgur.com/GWr9lUc.jpg"
     },
     {
         "Title": "Avengers: Infinity War",
@@ -62,7 +66,8 @@
             "14:20",
             "17:30",
             "20:40"
-        ]
+        ],
+        "Poster": "https://i.imgur.com/aouNMIx.jpg"
     },
     {
         "Title": "Iron Man 3",
@@ -74,6 +79,7 @@
             "14:00",
             "19:00",
             "21:00"
-        ]
+        ],
+        "Poster": "https://i.imgur.com/sYIlBfm.jpg"
     }
 ]
