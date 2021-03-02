@@ -1,9 +1,15 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import {
+  
+  Navbar
 
-const FooterPage = () => {
+} from 'reactstrap';
+
+const Footer = () => {
   return (
-
+    <> 
+    <Navbar fixed="bottom" color="dark" dark expand="md">
     <div className="container">
     <MDBFooter color="blue" className="font-small pt-4 mt-4">
       <MDBContainer fluid className="text-center text-md-left">
@@ -42,7 +48,9 @@ const FooterPage = () => {
     </MDBFooter>
 
     </div>
+    </Navbar>
+    </>
   );
 }
 
-export default FooterPage;
+export default Footer;
