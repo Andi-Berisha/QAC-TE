@@ -3,7 +3,7 @@ import Navigation from './Navigation';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from './Footer';
 import Home from './Pages/HomePage';
-import Listings from './Pages/Listings';
+import ListingsPage from './Pages/ListingsPage';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/whatsOn" exact>
-          <Listings />
+          <ListingsPage />
         </Route>
       </Switch>
     </Router>
