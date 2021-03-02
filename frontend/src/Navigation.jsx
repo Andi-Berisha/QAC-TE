@@ -10,8 +10,6 @@ import {
     NavLink
 } from 'reactstrap';
 import { Link, } from 'react-router-dom';
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-import { Container, Row, Col } from 'reactstrap';
 
 
 const Navigation = (props) => {
