@@ -22,9 +22,9 @@ const Navigation = (props) => {
         <>
         
 
-            <Navbar color="dark" dark expand="md">
+            <Navbar color="" dark expand="md">
             <div className="container">
-                <NavbarBrand href="/">QAC</NavbarBrand>
+                <NavbarBrand href="/" ><img src="https://i.imgur.com/ZNczDfU.png" height='50px' width='83px' /></NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
