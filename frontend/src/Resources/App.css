@@ -29,3 +29,30 @@ input[type ="radio"]{
   transition: colour 200ms;
   
 }
+
+
+
+/* Film Classification Table */
+.Table{
+width: 100%;
+height: 80%;}
+
+.DescriptionHeader{
+width: 50%;
+
+
+}
+
+
+
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+
+
