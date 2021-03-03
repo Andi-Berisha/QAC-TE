@@ -5,12 +5,17 @@ body {
 }
 
 
+#comment{
+  min-height: 150px;
+}
 
 
 
-
-
-
+/* SideBar Formatting */
+#sidebar{
+  min-height: 100vh; 
+  /* margin-left: 0px; */
+}
 
 
 /* Star Rating CSS */
@@ -22,4 +27,5 @@ input[type ="radio"]{
   color:white ;
   cursor: pointer;
   transition: colour 200ms;
+  
 }
