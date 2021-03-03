@@ -11,25 +11,25 @@ const Footer = () => {
     <>
       <Navbar fixed="bottom" color="dark" dark expand="md">
         <div className="container">
-            <MDBContainer fluid className="text-center ">
-              
-                <MDBCol>
-                  <a href="#" style={{ color: "white" }}>Film Classification</a>
-                </MDBCol>
-                <MDBCol>
-                  <a href="#!" style={{ color: "white" }}>Socials</a>
-                </MDBCol>
-                <MDBCol>
-                  <a href="#!" style={{ color: "white" }}>About Us</a>
-                </MDBCol>
-                <MDBCol>
-                  <a href="#!" style={{ color: "white" }}>Contact Us</a>
-                </MDBCol>
-            
-            </MDBContainer>
-            <div className="footer-copyright text-center py-3">
-            </div>
-  
+          <MDBContainer fluid className="text-center ">
+
+            <MDBCol>
+              <a href="#" style={{ color: "white" }}>Film Classification</a>
+            </MDBCol>
+            <MDBCol>
+              <a href="#!" style={{ color: "white" }}>Socials</a>
+            </MDBCol>
+            <MDBCol>
+              <a href="#!" style={{ color: "white" }}>About Us</a>
+            </MDBCol>
+            <MDBCol>
+              <a href="/contactUs" style={{ color: "white" }}>Contact Us</a>
+            </MDBCol>
+
+          </MDBContainer>
+          <div className="footer-copyright text-center py-3">
+          </div>
+
 
         </div>
       </Navbar>
