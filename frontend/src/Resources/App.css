@@ -3,3 +3,29 @@
 body {
   background-image: url("https://i.pinimg.com/originals/64/99/fb/6499fbceda30cc9de9d688205cad4fb0.jpg")!important; 
 }
+
+
+#comment{
+  min-height: 150px;
+}
+
+
+
+/* SideBar Formatting */
+#sidebar{
+  min-height: 100vh; 
+  /* margin-left: 0px; */
+}
+
+
+/* Star Rating CSS */
+input[type ="radio"]{
+  display:none;
+}
+
+.star{
+  color:white ;
+  cursor: pointer;
+  transition: colour 200ms;
+  
+}

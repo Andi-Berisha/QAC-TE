@@ -2,13 +2,13 @@
 import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 
-const StarRating = () => {
+const StarRating = ({stars}) => {
     const [rating, setRating] = useState(null);
     const [hover, setHover] = useState(null);
 
     return <div>
-
-        <p style={{ color: "green", padding: "50px" }} > The Rating is {rating}: </p>
+        
+        <p style={{ marginTop : "5px" }} >Your Rating: </p>
         {[...Array(5)].map((star, i) => {
             const ratingValue = i + 1;
 
@@ -17,14 +17,15 @@ const StarRating = () => {
                     type="radio"
                     name="rating"
                     value={ratingValue}
-                    onClick={() => setRating(ratingValue)}
+                    onClick={() => {setRating(ratingValue);
+                    stars(ratingValue);}}
 
                 />
 
-                <FaStar
+                <FaStar 
                     className="star"
                     color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"}
-                    size={100}
+                    size={30}
                     onMouseEnter={() => setHover(ratingValue)}
                     onMouseLeave={() => setHover(null)}
                 />
