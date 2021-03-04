@@ -39,14 +39,14 @@ const BookingsPage = (booknow) => {
 
 
     return (
-        <div className="container">
+        <div className="container" >
             <Row>
                 <Col >
                     <div class="media" style={{ marginLeft: '100px' }}>
                         <img src={filmIndividual.Poster} height="500px" class="align-self-center" />
                     </div>
                 </Col>
-                <Col style={{ color: "white", backgroundColor: "grey" }}>
+                <Col className="rounded" style={{ color: "white", backgroundColor: "grey" }}>
                     <Form>
 
                         <FormGroup>
