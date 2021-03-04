@@ -24,6 +24,8 @@ const BookingsPage = () => {
 
     // setShowingTimeList(films.find(item => item.Title === title));
 
+    console.log(filmIndividual);
+
 
     return (
         <div className="container">
@@ -44,9 +46,9 @@ const BookingsPage = () => {
                                 id="filmSelect"
                                 onChange={({ target }) => {
                                     setTitle(target.value);
-                                    setfilmIndividual(films.find(item => item.Title === title));
-                                    console.log(target.value);
-                                    console.log(filmIndividual);
+                                    setfilmIndividual(films.find(item => item.Title === target.value));
+                                    // console.log(target.value);
+                                    // console.log(filmIndividual);
                                 }}>
                                 {films.map((item) =>
                                     <option obj={item} value={item.Title}>{item.Title}</option>)}
