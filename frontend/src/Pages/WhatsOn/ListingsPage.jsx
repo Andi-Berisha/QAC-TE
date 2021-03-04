@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import MovieList from './MovieList';
 import MovieSearchBar from './MovieSearchBar';
-import films from '../Resources/films.json';
+import films from '../../Resources/films.json';
 
 const ListingsPage = () => {
 
@@ -16,10 +16,6 @@ const ListingsPage = () => {
         e.preventDefault();
         setMovieList(films.filter(movie => movie.Title.toLowerCase().includes(query.toLowerCase())));
     }
-
-    useEffect(() => {
-        setMovieList(films.filter(movie => movie.Title.toLowerCase().includes(query.toLowerCase())));
-    }, [query]);
 
     return (
         <>

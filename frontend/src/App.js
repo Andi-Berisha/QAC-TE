@@ -3,7 +3,7 @@ import Navigation from './Navigation';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from './Footer';
 import Home from './Pages/HomePage';
-import ListingsPage from './Pages/ListingsPage';
+import ListingsPage from './Pages/WhatsOn/ListingsPage';
 import StarRating from './Pages/StarRating';
 import DiscussionPage from './Pages/Discussion Board/DiscussionPage';
 
