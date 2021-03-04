@@ -7,6 +7,7 @@ import ListingsPage from './Pages/ListingsPage';
 import StarRating from './Pages/StarRating';
 import DiscussionPage from './Pages/Discussion Board/DiscussionPage';
 import ContactPage from './Pages/ContactUs/ContactPage';
+import LocalAttractionsPage from './Pages/PlacesToGo/LocalAttractionsPage';
 
 
 
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/contactUs" exact>
           <ContactPage />
+        </Route>
+        <Route path="/localAttractions" exact>
+          <LocalAttractionsPage />
         </Route>
       </Switch>
     </Router>
