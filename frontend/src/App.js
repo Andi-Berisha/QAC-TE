@@ -6,6 +6,7 @@ import Home from './Pages/HomePage';
 import ListingsPage from './Pages/ListingsPage';
 import DiscussionPage from './Pages/Discussion Board/DiscussionPage';
 import BookingsPage from './Pages/BookingsAndPayment/BookingsPage';
+import PaymentPage from './Pages/BookingsAndPayment/PaymentPage';
 
 
 
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path="/bookings" >
           <BookingsPage/>
+        </Route>
+        <Route path="/payment" >
+          <PaymentPage/>
         </Route>
       </Switch>
     </Router>

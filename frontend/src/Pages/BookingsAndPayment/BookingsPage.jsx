@@ -148,7 +148,10 @@ const BookingsPage = (booknow) => {
 
 
                         </FormGroup>
-                        <Button color="warning" style={{ width: 100 }}>Pay Now</Button>
+                        {/* <Link to={{ pathname: `/bookings/${movie.Title}` }} style={{ color: 'white' }}>Book Now</Link> */}
+                        {/* <Button color="warning" style={{ width: 100 }}>Pay Now</Button> */}
+
+                        <Button color="warning" style={{ width: 100 }}> <Link to={{ pathname: `/payment/` }} style={{ color: 'black' }}>Book Now</Link> </Button>
                     </Form>
                 </Col>
             </Row>
