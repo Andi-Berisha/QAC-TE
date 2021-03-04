@@ -1,4 +1,4 @@
-import { Button, Form, FormGroup, Input, Row, Col, Card, CardText, CardHeader, CardFooter, Toast, ToastHeader, ToastBody } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import ContactInfo from './ContactInfo';
 import EmailForm from './EmailForm';
 

@@ -8,7 +8,7 @@ const ContactInfo = () => {
             <ToastHeader>
                 <h4 style={{ marginTop: '5px' }}>
                     Contact Info
-                            </h4>
+                </h4>
             </ToastHeader>
             <ToastBody>
                 <Row>
@@ -37,7 +37,6 @@ const ContactInfo = () => {
                 </Row>
             </ToastBody>
         </Toast>
-
     )
 }
 
