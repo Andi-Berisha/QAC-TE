@@ -5,7 +5,8 @@ import {CardGroup,Card} from "react-bootstrap";
 const ScreenInfo = () => {
 
     return (
-<>
+<div className="container">
+
 <h6 style ={{color:"white",
             position: 'absolute', left: '35.5%', top: '10%',
             transform: 'translate(-50%, -50%)',
@@ -16,7 +17,7 @@ const ScreenInfo = () => {
             position: 'absolute', left: '50%', top: '32%',
             transform: 'translate(-50%, -50%)'
         } }>
-<CardGroup>
+<CardGroup >
   <Card bg = "dark">
     <Card.Img variant="top"  style = {{width: 290, height: 200}} src="https://www.expatgo.com/my/wp-content/uploads/2014/article/September2013/gscstandard.jpg" />
     <Card.Body>
@@ -100,7 +101,7 @@ const ScreenInfo = () => {
   </Card>
 </CardGroup>
 </div>
-</>
+</div>
 
     )
 }
