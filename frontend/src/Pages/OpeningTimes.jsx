@@ -5,7 +5,7 @@ const OpeningTimes = () => {
 
     return(
 
-        <>
+        <div className="container">
         
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
@@ -47,7 +47,7 @@ const OpeningTimes = () => {
         </MDBContainer>
       </div>
 
-    </>
+    </div>
     
         )
 }
