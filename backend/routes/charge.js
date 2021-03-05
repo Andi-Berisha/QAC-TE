@@ -1,6 +1,6 @@
 import Stripe from "stripe";
-
-const stripe = new Stripe("sk_test_51IRJCSK9eOXpEB8jC5cpya35klc0uShoiYgk7dWsboOL7uS6DLoM6GezOmQzm24sACzKyw3xdB7qaumBgDvRYWey00L0d1pKzV");
+require('dotenv').config();
+const stripe = new Stripe(process.env.SECRET_KEY);
 
 export default async (req, res) => {
   const { id, amount } = req.body;
