@@ -1,4 +1,5 @@
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
+import axios from "axios";
 
 const CARD_OPTIONS = {
     iconStyle: 'solid',
@@ -20,7 +21,7 @@ const CARD_OPTIONS = {
     },
   };
 
-const CheckoutForm = () => {
+const CheckoutForm = (success) => {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -49,11 +50,20 @@ const CheckoutForm = () => {
       console.log('[error]', error);
     } else {
       console.log('[PaymentMethod]', paymentMethod);
+      const {id} = paymentMethod;
+
+      try {
+        const { data } = await axios.post("/charge", { id, amount: 1099 });
+        console.log(data);
+        success();
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style = {{maxWidth:'400px', margin: '0 auto' }}>
       <CardElement />
       <button type="submit" disabled={!stripe}>
         Pay
