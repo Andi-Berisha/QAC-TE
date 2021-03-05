@@ -7,6 +7,7 @@ import ListingsPage from './Pages/ListingsPage';
 import StarRating from './Pages/StarRating';
 import DiscussionPage from './Pages/Discussion Board/DiscussionPage';
 import AboutUs from './Pages/AboutUsPage';
+import OpeningTimes from './Pages/OpeningTimes';
 
 
 
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/aboutUs" exact>
           <AboutUs/>
+        </Route>
+        <Route path="/openingTimes" exact>
+          <OpeningTimes/>
         </Route>
       </Switch>
     </Router>
