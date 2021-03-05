@@ -2,8 +2,10 @@
 
 body {
   background-image: url("https://i.pinimg.com/originals/64/99/fb/6499fbceda30cc9de9d688205cad4fb0.jpg")!important; 
+  background-attachment: fixed;
 }
 
+html { margin-bottom: 65px }
 
 #comment{
   min-height: 150px;
@@ -59,7 +61,6 @@ input[type ="radio"]{
   width: 100%;
   padding: 11px 15px 11px 0;
 }
-=======
 
 
 /* Film Classification Table */

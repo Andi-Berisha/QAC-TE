@@ -21,10 +21,10 @@ const Home = () => {
         <img alt="Iron Man 3" src="https://i.imgur.com/sYIlBfm.jpg" height={400} />
       </BasicFilm>
 
-      
+
       <div class="container" >
         <div class="center">
-          <Button color="secondary" style={{marginLeft:490}}>Book Tickets</Button>{' '}
+          <Button color="secondary" style={{ margin: '0 auto', display: 'block' }}>Book Tickets</Button>{' '}
         </div>
       </div>
     </div>
