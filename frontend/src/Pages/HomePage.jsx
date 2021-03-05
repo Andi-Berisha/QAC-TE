@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="container" >
 
-      <h5 style={{ color: "white" }}>Welcome to QA Cinemas!</h5>
+      <h5 style={{ color: "white" }} className="text-center">Welcome to QA Cinemas!</h5>
 
       <BasicFilm height={400}>
         <img alt="Avenger:Endgame" src="https://i.imgur.com/VmLLlbK.jpg" height={400} />

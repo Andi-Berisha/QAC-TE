@@ -7,6 +7,8 @@ import ListingsPage from './Pages/ListingsPage';
 import DiscussionPage from './Pages/Discussion Board/DiscussionPage';
 import FilmClassification from './Pages/Classification/FilmClassification';
 import ScreenInfo from './Pages/Screen Info/ScreenInfo';
+import AboutUs from './Pages/AboutUsPage';
+
 
 
 
@@ -30,6 +32,9 @@ function App() {
         </Route>
         <Route path="/screens" >
         <ScreenInfo/>
+        </Route>
+        <Route path="/aboutUs" exact>
+          <AboutUs/>
         </Route>
       </Switch>
     </Router>

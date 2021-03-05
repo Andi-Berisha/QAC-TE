@@ -20,7 +20,7 @@ const Footer = () => {
                   <a href="#!" style={{ color: "white" }}>Socials</a>
                 </MDBCol>
                 <MDBCol>
-                  <a href="#!" style={{ color: "white" }}>About Us</a>
+                  <a href="/aboutUs" style={{ color: "white" }}>About Us</a>
                 </MDBCol>
                 <MDBCol>
                   <a href="#!" style={{ color: "white" }}>Contact Us</a>
