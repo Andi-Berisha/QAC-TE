@@ -24,7 +24,7 @@ const FilmClassification = () => {
             Classification: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/BBFC_12A_2019.svg/1024px-BBFC_12A_2019.svg.png" class="center" />,
             Description: "Generally suitable for those aged 12 and over; those under 12 admitted, but only if accompanied by an adult."
         },
-        
+
         {
             Classification: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/BBFC_15_2019.svg/1024px-BBFC_15_2019.svg.png" class="center" />,
             Description: "Suitable only for persons of 15 years and over. (Not to be supplied to any person below that age)"
@@ -33,7 +33,7 @@ const FilmClassification = () => {
         {
             Classification: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/BBFC_18_2019.svg/1024px-BBFC_18_2019.svg.png" class="center" />,
             Description: "Suitable only for persons of 18 years and over. (Not to be supplied to any person below that age)"
-            
+
         }
     ]
 
@@ -48,12 +48,13 @@ const FilmClassification = () => {
     }
 
 
+
     return (
 
         <>
 
             <div className="Table">
-                <div className="col-md-6 " style={{ marginLeft: "295px" }}>
+                <div className="col-md-6 " style={{ marginLeft: "302px", width: 700 }}>
                     <ReactBootStrap.Table striped bordered hover variant="dark">
                         <thead >
                             <tr style={{ color: "white" }}>
@@ -72,9 +73,13 @@ const FilmClassification = () => {
 
 
 
+
+
                 </div>
             </div>
         </>
+
+
     )
 
 

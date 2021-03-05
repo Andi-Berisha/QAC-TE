@@ -45,7 +45,9 @@ width: 50%;
 
 
 
-
+.screenCard{
+  margin-left: 100px;
+}
 
 .center {
   display: block;

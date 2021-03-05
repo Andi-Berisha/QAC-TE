@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from './Footer';
 import Home from './Pages/HomePage';
 import ListingsPage from './Pages/ListingsPage';
-import StarRating from './Pages/StarRating';
 import DiscussionPage from './Pages/Discussion Board/DiscussionPage';
 import FilmClassification from './Pages/Classification/FilmClassification';
+import ScreenInfo from './Pages/Screen Info/ScreenInfo';
 
 
 
@@ -19,14 +19,17 @@ function App() {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/whatsOn" exact>
+        <Route path="/whatsOn" >
           <ListingsPage />
         </Route>
-        <Route path="/discussionBoard" exact>
+        <Route path="/discussionBoard" >
           <DiscussionPage />
         </Route>
-        <Route path="/FilmClassifications" exact>
+        <Route path="/FilmClassifications" >
          <FilmClassification/>
+        </Route>
+        <Route path="/screens" >
+        <ScreenInfo/>
         </Route>
       </Switch>
     </Router>
