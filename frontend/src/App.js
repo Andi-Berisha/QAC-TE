@@ -5,6 +5,8 @@ import Footer from './Footer';
 import Home from './Pages/HomePage';
 import ListingsPage from './Pages/ListingsPage';
 import DiscussionPage from './Pages/Discussion Board/DiscussionPage';
+import ContactPage from './Pages/ContactUs/ContactPage';
+import LocalAttractionsPage from './Pages/PlacesToGo/LocalAttractionsPage';
 import BookingsPage from './Pages/BookingsAndPayment/BookingsPage';
 import PaymentPage from './Pages/BookingsAndPayment/PaymentPage';
 import FilmClassification from './Pages/Classification/FilmClassification';
@@ -29,6 +31,12 @@ function App() {
         <Route path="/discussionBoard" >
           <DiscussionPage />
         </Route>
+        <Route path="/contactUs" exact>
+          <ContactPage />
+        </Route>
+        <Route path="/localAttractions" exact>
+          <LocalAttractionsPage />
+         </Route>
         <Route path="/bookings" >
           <BookingsPage/>
         </Route>

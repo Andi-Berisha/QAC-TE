@@ -1,43 +1,34 @@
-'use strict';
-
-import { useState } from 'react'
-// import CardFront from './CardFront';
-// import CardBack from './CardBack';
+import { useState, useEffect } from 'react';
+import MovieList from './MovieList';
+import MovieSearchBar from './MovieSearchBar';
 import films from '../Resources/films.json';
-import { Button, Form, Input, Row, Col, Badge } from 'reactstrap';
-import { Link, } from 'react-router-dom';
 
-// import {
-//     Card, CardImg, CardText, CardBody, CardDeck,
-//     CardTitle, CardSubtitle, Button
-// } from 'reactstrap';
-
-const Listings = () => {
+const ListingsPage = () => {
 
     const [query, setQuery] = useState(``);
+    const [movieList, setMovieList] = useState(films);
 
-    const handleQuery = e => {
-        // console.log(e.target.value);
+    const handleQuery = (e) => {
         setQuery(e.target.value);
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setMovieList(films.filter(movie => movie.Title.toLowerCase().includes(query.toLowerCase())));
+    }
+
+    useEffect(() => {
+        setMovieList(films.filter(movie => movie.Title.toLowerCase().includes(query.toLowerCase())));
+    }, [query]);
+
     return (
         <>
-
             <div className="container" style={{ marginTop: '20px' }}>
-                <Form>
-                    <Row form>
-                        <Col md={4}>
-                            <Input placeholder="Search movie title" type="text" onChange={event => setQuery(event.target.value)} />
-                        </Col>
-                        <Col md={8}>
-                            <Button type="submit" >Search</Button>
-                        </Col>
-                    </Row>
-                </Form>
+
+                <MovieSearchBar handleQuery={handleQuery} handleSubmit={handleSubmit} query={query} />
+
+
                 <hr style={{ backgroundColor: 'gray', marginTop: '30px' }} />
-
-
                 {films.filter((val) => {
                     if (query == "") {
                         return val
@@ -72,23 +63,13 @@ const Listings = () => {
                         <hr style={{ backgroundColor: 'gray' }} />
                     </>
 
+                {movieList.map((movie) => (
+                    <MovieList key={movie.id} query={query} movie={movie} />
                 ))}
 
-                {/* <ReactCardFlip
-                isFlipped={this.state.isFlipped}
-                flipDirection="horizontal">
-                <CardFront
-                    movie={this.props.movie}
-                    frontKey={this.props.movie.id}
-                    handleClick={this.handleClick} />
-                <CardBack
-                    movie={this.props.movie}
-                    backKey={this.props.movie.id}
-                    handleClick={this.handleClick} />
-            </ReactCardFlip> */}
             </div>
         </>
     )
 }
 
-export default Listings;
+export default ListingsPage;
