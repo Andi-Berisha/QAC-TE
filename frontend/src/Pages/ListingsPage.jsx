@@ -64,7 +64,7 @@ const Listings = () => {
                                 <p><small>Directors: {movie.Directors}</small></p>
 
                                 <Button >
-                                    <Link to={{ pathname: `/bookingsPage/${movie.Title}` }} style={{ color: 'white' }}>Book Now</Link>
+                                    <Link to={{ pathname: `/bookings/${movie.Title}` }} style={{ color: 'white' }}>Book Now</Link>
                                 </Button>
 
                             </div>
