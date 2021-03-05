@@ -3,11 +3,11 @@ import { loadStripe } from '@stripe/stripe-js';
 import CheckoutForm from './CheckoutForm';
 import { Button, Form, FormGroup, Label, Input, FormText, Col, Row, Badge } from 'reactstrap';
 import { Toast, ToastBody, ToastHeader, ToastFooter } from "reactstrap";
-import PUBLISHABLE_KEY from './.env'
-require('dotenv').config();
+// import PUBLISHABLE_KEY from './.env'
+// require('dotenv').config();
 
-const stripePromise = loadStripe(process.env.PUBLISHABLE_KEY);
-// const stripePromise = loadStripe('');
+// const stripePromise = loadStripe(process.env.PUBLISHABLE_KEY);
+const stripePromise = loadStripe('');
 
 // console.log(process.env.PUBLISHABLE_KEY)
 
