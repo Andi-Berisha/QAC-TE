@@ -6,6 +6,7 @@ import Home from './Pages/HomePage';
 import ListingsPage from './Pages/ListingsPage';
 import StarRating from './Pages/StarRating';
 import DiscussionPage from './Pages/Discussion Board/DiscussionPage';
+import AboutUs from './Pages/AboutUsPage';
 
 
 
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path="/discussionBoard" exact>
           <DiscussionPage />
+        </Route>
+        <Route path="/aboutUs" exact>
+          <AboutUs/>
         </Route>
       </Switch>
     </Router>
