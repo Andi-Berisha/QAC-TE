@@ -14,7 +14,7 @@ const Footer = () => {
             <MDBContainer fluid className="text-center ">
               
                 <MDBCol>
-                  <a href="#" style={{ color: "white" }}>Film Classification</a>
+                  <a href="/FilmClassifications" style={{ color: "white" }}>Film Classifications</a>
                 </MDBCol>
                 <MDBCol>
                   <a href="#!" style={{ color: "white" }}>Socials</a>

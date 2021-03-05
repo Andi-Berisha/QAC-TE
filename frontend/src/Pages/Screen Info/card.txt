@@ -1,0 +1,12 @@
+ <ReactBootStrap.Card style={{ width: '18rem' }}>
+                <ReactBootStrap.Card.Body>
+                    <ReactBootStrap.Card.Title>Card Title</ReactBootStrap.Card.Title>
+                    <ReactBootStrap.Card.Subtitle className="mb-2 text-muted">Card Subtitle</ReactBootStrap.Card.Subtitle>
+                    <ReactBootStrap.Card.Text>
+                        Some quick example text to build on the card title and make up the bulk of
+                        the card's content.
+                    </ReactBootStrap.Card.Text>
+                    <ReactBootStrap.Card.Link href="#">Card Link</ReactBootStrap.Card.Link>
+                    <ReactBootStrap.Card.Link href="#">Another Link</ReactBootStrap.Card.Link>
+                </ReactBootStrap.Card.Body>
+            </ReactBootStrap.Card>
