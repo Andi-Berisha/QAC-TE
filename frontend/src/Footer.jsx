@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { MDBCol, MDBContainer } from "mdbreact";
 import {
 
   Navbar
@@ -29,7 +29,8 @@ const Footer = () => {
           </MDBContainer>
           <div className="footer-copyright text-center py-3">
           </div>
-
+ 
+  
 
         </div>
       </Navbar>

@@ -27,6 +27,10 @@ const DiscussionRoute = require('./routes/Discussion');
 
 app.use(`${DISCUSSION_URL}`, DiscussionRoute);
 
+// const StripeRoute = require('./routes/charge');
+
+// app.use(`${Stripe_URL}`, StripeRoute);
+
 // error handling
 app.use((req, res, next) => {
     next(createError(404, 'Resource not found'));

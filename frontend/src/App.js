@@ -4,10 +4,15 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from './Footer';
 import Home from './Pages/HomePage';
 import ListingsPage from './Pages/ListingsPage';
-import StarRating from './Pages/StarRating';
 import DiscussionPage from './Pages/Discussion Board/DiscussionPage';
 import ContactPage from './Pages/ContactUs/ContactPage';
 import LocalAttractionsPage from './Pages/PlacesToGo/LocalAttractionsPage';
+import BookingsPage from './Pages/BookingsAndPayment/BookingsPage';
+import PaymentPage from './Pages/BookingsAndPayment/PaymentPage';
+import FilmClassification from './Pages/Classification/FilmClassification';
+import ScreenInfo from './Pages/Screen Info/ScreenInfo';
+import AboutUs from './Pages/AboutUsPage';
+import OpeningTimes from './Pages/OpeningTimes';
 
 
 
@@ -20,10 +25,10 @@ function App() {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/whatsOn" exact>
+        <Route path="/whatsOn" >
           <ListingsPage />
         </Route>
-        <Route path="/discussionBoard" exact>
+        <Route path="/discussionBoard" >
           <DiscussionPage />
         </Route>
         <Route path="/contactUs" exact>
@@ -31,6 +36,24 @@ function App() {
         </Route>
         <Route path="/localAttractions" exact>
           <LocalAttractionsPage />
+         </Route>
+        <Route path="/bookings" >
+          <BookingsPage/>
+        </Route>
+        <Route path="/payment" >
+          <PaymentPage/>
+    </Route>
+        <Route path="/FilmClassifications" >
+         <FilmClassification/>
+        </Route>
+        <Route path="/screens" >
+        <ScreenInfo/>
+        </Route>
+        <Route path="/aboutUs" exact>
+          <AboutUs/>
+        </Route>
+        <Route path="/openingTimes" exact>
+          <OpeningTimes/>
         </Route>
       </Switch>
     </Router>
