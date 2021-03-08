@@ -26,24 +26,24 @@ const CARD_OPTIONS = {
 
 
 
-const CheckoutForm = ({success}, {amount}, bookingID) => {
+const CheckoutForm = ({ success, amount, bookingID }) => {
   const stripe = useStripe();
   const elements = useElements();
 
   const updateDatabase = () => {
     // e.preventDefault();
     axios.patch(`${BOOKINGS_URL}/update/${bookingID}`,
-        { paid: "true" })
-        .then((res) => {
-            // trigger(res.data);
-            // toggle();
-            console.log(bookingID);
-            console.log('succesfully updated db');
-        })
-        .catch((err)=>{
-            // trigger(err.data);
-            console.log(err);
-        })
+      { paid: "true" })
+      .then((res) => {
+        // trigger(res.data);
+        // toggle();
+        console.log(bookingID);
+        console.log('succesfully updated db');
+      })
+      .catch((err) => {
+        // trigger(err.data);
+        console.log(err);
+      })
   }
 
   const handleSubmit = async (event) => {
