@@ -47,6 +47,10 @@ const BookingSchema = new Schema({
     },
     totalPrice: {
         type: Number
+    },
+    paid: {
+        type: Boolean,
+        default:false
     }
 }
 );

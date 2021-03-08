@@ -4,6 +4,7 @@ import { Button, Form, FormGroup, Label, Input, FormText, Col, Row, Badge,  Moda
 import { Link, } from 'react-router-dom';
 import { DB_URL, BOOKINGS_URL } from "../../Resources/CONSTS.json";
 import axios from "axios";
+import PaymentModal from './PaymentModal';
 const BookingsPage = (booknow) => {
 
     const [poster, setPoster] = useState('');
@@ -15,6 +16,7 @@ const BookingsPage = (booknow) => {
     const [child, setChild] = useState(0);
     const [concession, setConcession] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
+    const [bookingID, setBookingID] = useState('');
     const [filmObj, setFilmObj] = useState(films);
     const [filmIndividual, setfilmIndividual] = useState(films.find(item => item.Title === title));
     
@@ -58,6 +60,8 @@ const BookingsPage = (booknow) => {
         axios.post(`${BOOKINGS_URL}/create`, { title, showingTime, bookerName, adult, child, concession, totalPrice })
             .then((res) => {
                 console.log(res.data);
+                // console.log(res.data._id);
+                setBookingID(res.data)
                 toggle();
                 
             }).catch((err) => {
@@ -95,10 +99,11 @@ const BookingsPage = (booknow) => {
                         </FormGroup>
                         <FormGroup>
                             <Label for="showingTimes">Showing Times</Label>
-                            <Input type="select" name="select" id="exampleSelect" onChange={({ target }) => { setShowingTime(target.value) }}>
+                            <Input type="select" name="select" id="exampleSelect" onChange={({ target }) => { setShowingTime(target.value);
+                            console.log(`showing time selected: ${showingTime}`); }}>
                                 {filmIndividual.Showtimes.map((item) =>
                                     <option value={item}>{item}</option>)}
-                                {console.log(`showing time selected: ${showingTime}`)}
+                                
                             </Input>
 
                         </FormGroup>
@@ -196,13 +201,14 @@ const BookingsPage = (booknow) => {
             <Modal isOpen={modal} toggle={toggle}>
                 <ModalHeader toggle={toggle}>Please confirm</ModalHeader>
                 <ModalBody>
-                <p>Title: {title}</p>
+                {/* <p>Title: {title}</p>
                 <p> Showing Time: {showingTime}</p>
                 <p>  Name: {bookerName}</p>
                 <p>  Adult: {adult}</p>
                 <p>  Child: {child}</p>
-                <p> Concession: {concession}</p>
-                <p> Total Price: £{totalPrice.toFixed(2)}</p>
+                <p> Concession: {concession}</p>*/}
+                <p> Total Price: £{totalPrice.toFixed(2)}</p> 
+                <PaymentModal bookingID={bookingID}/>
                     
                 </ModalBody>
                 <ModalFooter>
