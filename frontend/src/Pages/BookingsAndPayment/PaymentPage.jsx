@@ -7,7 +7,7 @@ import { Toast, ToastBody, ToastHeader, ToastFooter } from "reactstrap";
 // require('dotenv').config();
 
 // const stripePromise = loadStripe(process.env.PUBLISHABLE_KEY);
-const stripePromise = loadStripe('');
+const stripePromise = loadStripe('pk_test_51IRJCSK9eOXpEB8jQfIX7nJGm8jrshmJJ0mISdUCUAYbjT4lV9hZLxvCfclftnED2Q7rgLz7KVeUWEDR0vhfCawY00r9aDXSb8');
 
 // console.log(process.env.PUBLISHABLE_KEY)
 
