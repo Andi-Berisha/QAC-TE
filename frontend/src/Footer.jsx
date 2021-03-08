@@ -17,7 +17,7 @@ const Footer = () => {
               <a href="/FilmClassifications" style={{ color: "white" }}>Film Classification</a>
             </MDBCol>
             <MDBCol>
-              <a href="#!" style={{ color: "white" }}>Socials</a>
+              <a href="/localAttractions" style={{ color: "white" }}>Local Attractions</a>
             </MDBCol>
             <MDBCol>
               <a href="/aboutUs" style={{ color: "white" }}>About Us</a>
