@@ -12,7 +12,7 @@ const stripePromise = loadStripe('pk_test_51IRJCSK9eOXpEB8jQfIX7nJGm8jrshmJJ0mIS
 
 // console.log(process.env.PUBLISHABLE_KEY)
 
-const PaymentModal = () => {
+const PaymentModal = ({bookingID}) => {
     const [status, setStatus] = useState("ready");
 
     if (status === "success") {
@@ -26,7 +26,7 @@ const PaymentModal = () => {
             <Elements stripe={stripePromise}>
                 <CheckoutForm success={() => {
                     setStatus("success");
-                }} amount={1299} />
+                }} amount={1299} bookingID={bookingID}/>
             </Elements>
 
         </div>
