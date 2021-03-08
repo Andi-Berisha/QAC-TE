@@ -208,7 +208,7 @@ const BookingsPage = (booknow) => {
                 <p>  Child: {child}</p>
                 <p> Concession: {concession}</p>*/}
                 <p> Total Price: £{totalPrice.toFixed(2)}</p> 
-                <PaymentModal bookingID={bookingID}/>
+                <PaymentModal bookingID={bookingID} amount ={totalPrice*100}/>
                     
                 </ModalBody>
                 <ModalFooter>

@@ -74,7 +74,7 @@ const CheckoutForm = ({ success, amount, bookingID }) => {
       const { id } = paymentMethod;
 
       try {
-        const { data } = await axios.post("http://localhost:5019/Stripe/charge", { id, amount: 1099 });
+        const { data } = await axios.post("http://localhost:5019/Stripe/charge", { id, amount: amount });
         console.log(data);
         success();
         updateDatabase();
