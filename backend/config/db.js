@@ -14,18 +14,45 @@ const DiscussionSchema = new Schema({
     },
     Comments: {
         type: String,
-        required: true},
+        required: true
+    },
 
     Rating: {
-            type: Number,
-            required: true
+        type: Number,
+        required: true
 
 
-        }
     }
+}
+);
+
+const BookingSchema = new Schema({
+    title: {
+        type: String
+    },
+    showingTime: {
+        type: String
+    },
+    bookerName: {
+        type: String
+    },
+    adult: {
+        type: Number
+    },
+    child: {
+        type: Number
+    },
+    concession: {
+        type: Number
+    },
+    totalPrice: {
+        type: Number
+    }
+}
 );
 
 const Discussion = model('Discussion', DiscussionSchema);
+const Bookings = model('Bookings',BookingSchema);
 
 mongoose.connect(`${DB_URL}/${DB_NAME}`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
     if (err) {
@@ -35,4 +62,4 @@ mongoose.connect(`${DB_URL}/${DB_NAME}`, { useNewUrlParser: true, useUnifiedTopo
     }
 });
 
-module.exports = { "Discussion": Discussion };
+module.exports = { "Discussion": Discussion, "Bookings":Bookings };

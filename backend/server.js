@@ -1,5 +1,6 @@
 'use strict';
 const {DISCUSSION_URL} = require ("./config/CONSTS.json")
+const {BOOKINGS_URL} = require ("./config/CONSTS.json")
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -24,8 +25,11 @@ app.use(logger);
 
 // importing all of the routes in Discussion.js
 const DiscussionRoute = require('./routes/Discussion');
-
 app.use(`${DISCUSSION_URL}`, DiscussionRoute);
+
+// importing all of the routes in Bookings.js
+const BookingsRoute = require('./routes/Bookings');
+app.use(`${BOOKINGS_URL}`, BookingsRoute);
 
 // const StripeRoute = require('./routes/charge');
 
