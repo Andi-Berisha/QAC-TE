@@ -24,7 +24,7 @@ const Home = () => {
 
       <div class="container" >
         <div class="center">
-          <Button color="secondary" style={{ margin: '0 auto', display: 'block' }}>Book Tickets</Button>{' '}
+          <Button href="/bookings" color="secondary" style={{ margin: '0 auto', display: 'block' }}>Book Tickets</Button>{' '}
         </div>
       </div>
     </div>
