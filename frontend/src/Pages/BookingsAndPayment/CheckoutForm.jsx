@@ -1,29 +1,50 @@
-import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import axios from "axios";
+import { Link, } from 'react-router-dom';
+import { BOOKINGS_URL } from "../../Resources/CONSTS.json";
+
 
 const CARD_OPTIONS = {
-    iconStyle: 'solid',
-    style: {
-      base: {
-        iconColor: '#c4f0ff',
-        color: '#fff',
-        fontWeight: 500,
-        fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
-        fontSize: '16px',
-        fontSmoothing: 'antialiased',
-        ':-webkit-autofill': {color: '#fce883'},
-        '::placeholder': {color: '#87bbfd'},
-      },
-      invalid: {
-        iconColor: '#ffc7ee',
-        color: '#ffc7ee',
-      },
+  iconStyle: 'solid',
+  hidePostalCode: true,
+  style: {
+    // base: {
+    //   iconColor: '#c4f0ff',
+    //   fontWeight: 500,
+    //   fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
+    //   fontSize: '16px',
+    //   fontSmoothing: 'antialiased',
+    //   ':-webkit-autofill': {color: '#fce883'},
+    //   '::placeholder': {color: '#87bbfd'},
+    // },
+    invalid: {
+      iconColor: '#ff0000',
+      color: '#ff0000',
     },
-  };
+  },
+};
 
-const CheckoutForm = (success) => {
+
+
+const CheckoutForm = ({ success, amount, bookingID }) => {
   const stripe = useStripe();
   const elements = useElements();
+
+  const updateDatabase = () => {
+    // e.preventDefault();
+    axios.patch(`${BOOKINGS_URL}/update/${bookingID}`,
+        { paid: true })
+        .then((res) => {
+            // trigger(res.data);
+            // toggle();
+            console.log(bookingID);
+            console.log('succesfully updated db');
+        })
+        .catch((err)=>{
+            // trigger(err.data);
+            console.log(err);
+        })
+  }
 
   const handleSubmit = async (event) => {
     // Block native form submission.
@@ -41,7 +62,7 @@ const CheckoutForm = (success) => {
     const cardElement = elements.getElement(CardElement);
 
     // Use your card Element with other Stripe.js APIs
-    const {error, paymentMethod} = await stripe.createPaymentMethod({
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: 'card',
       card: cardElement,
     });
@@ -50,12 +71,14 @@ const CheckoutForm = (success) => {
       console.log('[error]', error);
     } else {
       console.log('[PaymentMethod]', paymentMethod);
-      const {id} = paymentMethod;
+      const { id } = paymentMethod;
 
       try {
-        const { data } = await axios.post("/charge", { id, amount: 1099 });
+        const { data } = await axios.post("http://localhost:5019/Stripe/charge", { id, amount: amount });
         console.log(data);
         success();
+        updateDatabase();
+        // return (<Link to={{ pathname: `/` }} style={{ color: 'black' }}></Link>);
       } catch (error) {
         console.log(error);
       }
@@ -63,8 +86,10 @@ const CheckoutForm = (success) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style = {{maxWidth:'400px', margin: '0 auto' }}>
-      <CardElement />
+    <form onSubmit={handleSubmit} style={{ color: 'black', maxWidth: '400px', margin: '0 auto' }}>
+      {/* <label>Name on credit card:</label><br/> */}
+      {/* <input type="text" name="name" /> */}
+      <CardElement options={CARD_OPTIONS} />
       <button type="submit" disabled={!stripe}>
         Pay
       </button>
