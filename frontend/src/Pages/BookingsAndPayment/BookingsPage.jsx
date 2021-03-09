@@ -212,8 +212,7 @@ const BookingsPage = (booknow) => {
                     
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="secondary" onClick={toggle}>Cancel</Button>
-                    <Button color="secondary" onClick={dismissModal}><Link to={{ pathname: `/payment/` }} style={{ color: 'black' }}>Pay Now</Link></Button>
+                    <Button color="secondary" onClick={toggle}>Back</Button>
                 </ModalFooter>
             </Modal>
         </div>

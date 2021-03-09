@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import CheckoutForm from './CheckoutForm';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Row, Badge } from 'reactstrap';
+import { Button } from 'reactstrap';
 import { Toast, ToastBody, ToastHeader, ToastFooter } from "reactstrap";
 // import PUBLISHABLE_KEY from './.env'
 // require('dotenv').config();
@@ -16,7 +16,8 @@ const PaymentModal = ({bookingID, amount}) => {
     const [status, setStatus] = useState("ready");
 
     if (status === "success") {
-        return <div>Congrats !</div>;
+        return <div> <p>Payment Successfully Processed!</p>
+                     <Button href="/whatsOn" color="secondary">Back to Listings</Button></div>;
     }
     return (
         <div className="container">
