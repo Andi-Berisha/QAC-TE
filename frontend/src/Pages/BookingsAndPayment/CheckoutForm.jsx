@@ -88,7 +88,7 @@ const CheckoutForm = ({ success, amount, bookingID }) => {
   return (
     <form onSubmit={handleSubmit} style={{ color: 'black', maxWidth: '400px', margin: '0 auto' }}>
       {/* <label>Name on credit card:</label><br/> */}
-      <input type="text" name="name" />
+      {/* <input type="text" name="name" /> */}
       <CardElement options={CARD_OPTIONS} />
       <button type="submit" disabled={!stripe}>
         Pay
