@@ -4,6 +4,10 @@ import axios from "axios";
 import { DB_URL, DISCUSSION_URL } from "../../Resources/CONSTS.json";
 import StarRating from "../StarRating";
 
+const Filter = require('bad-words'),
+    filter = new Filter();
+    filter.addWords('nomoretesting');
+
 
 const DiscussionBoard = ({ trigger }) => {
 
@@ -63,7 +67,7 @@ const DiscussionBoard = ({ trigger }) => {
                             className="form-control"
                             placeholder="Comments"
                             value={Comments}
-                            onChange={({ target }) => setComment(target.value)}
+                            onChange={({ target }) => setComment(filter.clean(target.value))}
                             
                         />
                         {/* <input
