@@ -6,6 +6,7 @@ import StarRating from "../StarRating";
 
 const Filter = require('bad-words'),
     filter = new Filter();
+    filter.addWords('nomoretesting');
 
 
 const DiscussionBoard = ({ trigger }) => {
