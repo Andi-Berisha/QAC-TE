@@ -25,15 +25,4 @@ router.post("/create", ({ body }, res, next) => {
 });
 
 
-// ? DELETE
-router.delete("/delete/:id", (req, res, next) => {
-    Discussion.findByIdAndDelete(req.params.id, (err) => {
-        if (err) {
-            next(err);
-        }
-        res.status(204).send(`Successfully deleted`);
-    });
-});
-
-
 module.exports = router; 
