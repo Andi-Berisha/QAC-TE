@@ -127,9 +127,9 @@ We use [SemVer](http://semver.org/) for versioning.
 ## Authors
 
 * **Andi Berisha** 
-* **Adige Uraih ** 
+* **Adige Uraih** 
 * **Claes Alfonso**
-* **Celina Basa **  
+* **Celina Basa**  
 
 ## License
 
