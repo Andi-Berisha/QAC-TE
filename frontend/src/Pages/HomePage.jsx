@@ -22,8 +22,8 @@ const Home = () => {
       </BasicFilm>
 
 
-      <div class="container" >
-        <div class="center">
+      <div className="container" >
+        <div className="center">
           <Button href="/bookings" color="secondary" style={{ margin: '0 auto', display: 'block', marginTop: '10px', width: '150px' }}>Book Tickets</Button>{' '}
         </div>
       </div>

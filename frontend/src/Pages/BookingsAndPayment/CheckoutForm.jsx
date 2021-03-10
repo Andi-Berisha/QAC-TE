@@ -1,6 +1,5 @@
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import axios from "axios";
-import { Link, } from 'react-router-dom';
 import { BOOKINGS_URL } from "../../Resources/CONSTS.json";
 
 
