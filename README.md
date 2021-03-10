@@ -127,7 +127,7 @@ We use [SemVer](http://semver.org/) for versioning.
 ## Authors
 
 * **Andi Berisha** 
-* **Adige Uraih** 
+* **Adigwe Uraih** 
 * **Claes Alfonso**
 * **Celina Basa**  
 
