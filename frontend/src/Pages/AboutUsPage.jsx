@@ -1,8 +1,8 @@
-'use strict';
+
 import React from 'react';
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  Card, CardText, CardBody,
+  CardTitle, Button
 } from 'reactstrap';
 
 const AboutUs = () => {
