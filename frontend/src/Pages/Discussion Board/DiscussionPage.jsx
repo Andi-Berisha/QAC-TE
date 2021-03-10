@@ -1,7 +1,7 @@
 import CreateDiscussion from "./CreateDiscussion"
 import { useState } from 'react';
 import ReadDiscussion from "./ReadDiscussion";
-import { Container } from "reactstrap";
+
 
 const DiscussionPage = () => {
 

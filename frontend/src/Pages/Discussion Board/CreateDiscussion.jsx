@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, CardBody, CardTitle, Input } from "reactstrap"
 import axios from "axios";
-import { DB_URL, DISCUSSION_URL } from "../../Resources/CONSTS.json";
+import { DISCUSSION_URL } from "../../Resources/CONSTS.json";
 import StarRating from "../StarRating";
 
 const Filter = require('bad-words'),
