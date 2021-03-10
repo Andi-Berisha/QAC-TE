@@ -12,7 +12,7 @@ const MovieList = ({ movie }) => {
                     <h4 className="mt-0">
                         {movie.Title}
                         <Badge color="warning" pill style={{ marginLeft: '15px' }}>
-                            <Link to="/filmClassification" style={{ color: 'black' }}>{movie.Rating}</Link>
+                            <Link to="/FilmClassifications" style={{ color: 'black' }}>{movie.Rating}</Link>
                         </Badge>
                     </h4>
 
