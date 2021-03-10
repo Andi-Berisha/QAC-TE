@@ -52,10 +52,12 @@ Testing Dependencies:
 
 ### Installing
 1. Fork and then clone down this repo to your system.
-2. Open your Spring Tool Suite 4.
-3. Open the project by clicking on file > open projects from file system.
-4. Go to local on the boot dashboard and select the project.
-5. Click Start Process.
+2. Open this repo in VsCode.
+3. Open the integrated terminal and type "npm install --save", to install
+   and save the dependencies required for the app to run.
+4. Then in the terminal navigate to both the front end and back end folders and type
+   "npm start" to start and run the application.
+
 
 To run the application from the command line, write the following command:
 
@@ -64,8 +66,9 @@ $java -jar ToDo_Project-0.0.1-SNAPSHOT.jar
 ```
 
 ## Running the tests
-To run the tests and view test coverage % for each class, right click on the project in spring
-and select coverage as, then select JUnit Test.
+To run the tests and view test coverage % for each class, open up the integrated terminal in VSCode and then cd into the back
+end. Once here, type "npm run coverage", all the tests will run and at the end you will be presented with a table illustrating the coverage
+of the application.
 
 ### Integration Tests 
 Integration testing is a testing approach that targets the very fundamental building blocks of an application,
@@ -73,106 +76,39 @@ the idea is to prove that each 'integration' of the application is functioning a
 
 * **Integration Test Example:**
 ```
-@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-@AutoConfigureMockMvc
-@Sql(scripts = {"classpath:schema-test.sql","classpath:data-test.sql"}, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-@ActiveProfiles(profiles="test")
-class UserControllerIntegrationTest {
-	
-	@Autowired
-	private MockMvc mock;
-	@Autowired
-	private ModelMapper mapper;
-	
-	@Autowired
-	private ObjectMapper jsonifier;
-	
-	private final int ID = 4;
-	
-	
-	List<TaskDomain> tasksDomain = new ArrayList<>();
-	List<TaskDTO> tasks = new ArrayList<>();
-	
-	private UserDTO mapToDTO(UserDomain model) {
-		return this.mapper.map(model, UserDTO.class); 
-	}
-	
-	
-	
-	
-	@Test
-	public void read() throws Exception{
-		
-		
-		UserDTO expectedOutcome = new UserDTO(4L, "John", "Behar",tasks);
-		// Set up the request
-		MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders
-				.request(HttpMethod.GET, "http://localhost:8081/user/read/" + ID);
-		
-	// set up expectations
-		ResultMatcher matchStatus = MockMvcResultMatchers.status().isOk();
-		ResultMatcher matchContent = MockMvcResultMatchers.content()
-				.json(jsonifier.writeValueAsString(expectedOutcome));
-		
-	//Perform
-		this.mock.perform(mockRequest).andExpect(matchStatus).andExpect(matchContent);
-}
+describe(`Bookings Routes`, () => {
+
+    it(`Test /create route`, (done) => {
+        chai.request(app)
+        .post(`${BOOKINGS_URL}/create`)
+        .send({'title' : 'Avengers: Endgame'})
+        .end((err, response) => {
+            if(err) done(err); 
+            expect(err).to.be.null;
+            expect(response).to.not.be.undefined;
+            expect(response).to.have.status(200);
+            expect(response).to.have.property('text');
+            done();
+        });
+    });
+
+    it(`Test /update:id route`, (done) => {
+        chai.request(app)
+        .patch(`${BOOKINGS_URL}/update/604645a1e5b30b43f8b95d42`)
+        .send({'title' : 'Avengers: Endgame'})
+        .end((err, response) => {
+            if(err) done(err); 
+            expect(err).to.be.null;
+            expect(response).to.not.be.undefined;
+            expect(response).to.have.status(202);
+            expect(response).to.have.property('text', 'Successfully patched!');
+            done();
+        });
+    });
 
 ```
 
-### User Acceptance Tests 
-User acceptance Testing is the last phase of testing where a developer can verify to see if the product works for the user.
-This is done through the use of selenium a tool which automates web browsers and tests their functionality.
 
-* **User Acceptance Test Example:**
-Here a test has been written to see if the update user function works on the front end.
-```
-	
-	@Test
-	@Order(4)
-    public void UpdateUserTest() throws InterruptedException {
-		//given that I can access my todo web app
-				driver.get(URL);
-				
-				//When: I navigate to the update user tab 
-				targ = driver.findElement(By.xpath("/html/body/nav/div/ul/li[5]/a"));
-				targ.click();
-			
-				
-				//And: I enter a User ID
-				targ = driver.findElement(By.id("userID"));
-				targ.sendKeys("1");
-				
-				
-			 
-			    //And I enter a new user name:
-				targ = driver.findElement(By.id("newUserName"));
-				targ.sendKeys("Bob");
-				
-				//And I enter a new user surname:
-				targ = driver.findElement(By.id("newUserSurname"));
-				targ.sendKeys("Geldoff");
-				
-			    //And I click update:
-							targ = driver.findElement(By.xpath("/html/body/div[1]/div/form/div/button"));
-							targ.click();
-				
-				//And: I navigate to the home page user list:
-							targ = driver.findElement(By.xpath("/html/body/div[2]/a"));
-							targ.click();
-				
-				
-				
-				//And then I get output:
-				targ = driver.findElement(By.xpath("/html/body/div[1]/div/ul/li[2]"));
-				String output = targ.getText();
-				
-				//Assertion: 
-				assertEquals("Name: Bob", output);
-
-				
-			}
-```
 
 
 ## Deployment
@@ -186,9 +122,7 @@ Here a test has been written to see if the update user function works on the fro
 
 
 
-## Built With
 
-* [Maven](https://maven.apache.org/) - Dependency Management
 
 ## Versioning
 
