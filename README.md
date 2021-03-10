@@ -17,27 +17,35 @@ The following dependencies from NPMJS.com:
 
 Front End Dependencies:
 
-- axios: "^0.21.1
-- bootstrap: ^4.6.0
-- mdbreact: ^5.0.1
-- react: ^17.0.1
-- react-dom: ^17.0.1
-- react-film: ^3.0.0
-- react-icons": ^4.2.0
-- react-router-dom": ^5.2.0
+- axios: 0.21.1
+- bootstrap: 4.6.0
+- mdbreact: 5.0.1
+- react: 17.0.1
+- react-dom: 17.0.1
+- react-film: 3.0.0
+- react-icons": 4.2.0
+- react-router-dom: 5.2.0
 - react-scripts": 4.0.3
-- react-test-renderer: ^17.0.1
-- reactstrap: ^8.9.0,
-- web-vitals: ^1.1.0
+- react-test-renderer: 17.0.1
+- reactstrap: 8.9.0
+- web-vitals: 1.1.0
 
 
 Back End Dependencies:
 
-- body-parser": ^1.19.0
-- cors": ^2.8.5
-- express": ^4.17.1
-- http-errors": ^1.8.0
-- mongoose": ^5.11.18
+- body-parser: 1.19.0
+- cors: 2.8.5
+- express: 4.17.1
+- http-errors: 1.8.0
+- mongoose": 5.11.18
+
+Testing Dependencies:
+
+- chai: 4.3.0
+- chai-http: 4.3.0
+- mocha: 8.3.0
+- nodemon: 2.0.7
+- nyc: 15.1.0
 
 
 
