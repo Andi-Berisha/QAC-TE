@@ -3,7 +3,6 @@ import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import CheckoutForm from './CheckoutForm';
 import { Button } from 'reactstrap';
-import { Toast, ToastBody, ToastHeader, ToastFooter } from "reactstrap";
 // import PUBLISHABLE_KEY from './.env'
 // require('dotenv').config();
 

@@ -8,7 +8,6 @@ import DiscussionPage from './Pages/Discussion Board/DiscussionPage';
 import ContactPage from './Pages/ContactUs/ContactPage';
 import LocalAttractionsPage from './Pages/PlacesToGo/LocalAttractionsPage';
 import BookingsPage from './Pages/BookingsAndPayment/BookingsPage';
-import PaymentPage from './Pages/BookingsAndPayment/PaymentPage';
 import FilmClassification from './Pages/Classification/FilmClassification';
 import ScreenInfo from './Pages/Screen Info/ScreenInfo';
 import AboutUs from './Pages/AboutUsPage';
@@ -36,24 +35,22 @@ function App() {
         </Route>
         <Route path="/localAttractions" exact>
           <LocalAttractionsPage />
-         </Route>
-        <Route path="/bookings" >
-          <BookingsPage/>
         </Route>
-        <Route path="/payment" >
-          <PaymentPage/>
-    </Route>
+        <Route path="/bookings" >
+          <BookingsPage />
+        </Route>
+        
         <Route path="/FilmClassifications" >
-         <FilmClassification/>
+          <FilmClassification />
         </Route>
         <Route path="/screens" >
-        <ScreenInfo/>
+          <ScreenInfo />
         </Route>
         <Route path="/aboutUs" exact>
-          <AboutUs/>
+          <AboutUs />
         </Route>
         <Route path="/openingTimes" exact>
-          <OpeningTimes/>
+          <OpeningTimes />
         </Route>
       </Switch>
     </Router>
