@@ -3,8 +3,7 @@ Coverage: 81.01%
 
 
 # QA Cinema Web Application Project
-This project involved the design and creation of to-do list web application. The project has full crud functionality and allows user to make an account and create 
-a to do list for their everyday lives.
+This project involved the design and creation of a Cinema web application. The project employed crud functionality to allow users to book, discuss and pay for cinema tickets at various venues of our establishment. The discussion board allows user to rate movies and interact with fellow movie goers by allowing users to post comments and reviews. 
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -12,13 +11,35 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 You will need the following softwares to run this application and all of its tests:
 
-Java: https://www.oracle.com/java/technologies/javase/jdk14-archive-downloads.html
+Visual Studio Code: https://code.visualstudio.com/
 
-Spring Tool Suite 4:  https://spring.io/tools
+The following dependencies from NPMJS.com:
 
-Git Bash:  https://git-scm.com/download/win
+Front End Dependencies:
 
-Maven: https://maven.apache.org/index.html
+- axios: "^0.21.1
+- bootstrap: ^4.6.0
+- mdbreact: ^5.0.1
+- react: ^17.0.1
+- react-dom: ^17.0.1
+- react-film: ^3.0.0
+- react-icons": ^4.2.0
+- react-router-dom": ^5.2.0
+- react-scripts": 4.0.3
+- react-test-renderer: ^17.0.1
+- reactstrap: ^8.9.0,
+- web-vitals: ^1.1.0
+
+
+Back End Dependencies:
+
+- body-parser": ^1.19.0
+- cors": ^2.8.5
+- express": ^4.17.1
+- http-errors": ^1.8.0
+- mongoose": ^5.11.18
+
+
 
 
 ### Installing
@@ -38,37 +59,6 @@ $java -jar ToDo_Project-0.0.1-SNAPSHOT.jar
 To run the tests and view test coverage % for each class, right click on the project in spring
 and select coverage as, then select JUnit Test.
 
-### Unit Tests 
-Unit testing is a testing approach that targets the very fundamental building blocks of an application, the idea is to prove 
-that each 'unit' of the application is functioning as expected. Moreover, Unit testing is an automated process, which is designed to be reusable and provide reliable results.
-Lastly, the idea of unit testing is to ensure that our unit functions in isolation, this means we want to check that the performed actions of that unit/class meet our expectations.
-
-* **Unit Testing Example:**
-```
-	@Test
-	public void create() {
-		// Resources employed
-		TaskDomain exampleTask = new TaskDomain(1L, "Laundry", true, null);
-		TaskDTO exampleDTO = new TaskDTO(1L,"Laundry", true);
-
-		// Rules set
-		Mockito.when(this.mockedRepo.save(Mockito.any(TaskDomain.class))).thenReturn(exampleTask);
-		Mockito.when(this.mapper.map(exampleTask, TaskDTO.class)).thenReturn(exampleDTO);
-
-		// Actions performed
-		TaskDTO result = this.service.create(exampleTask);
-
-		// Assertions made
-		Assertions.assertThat(result).isNotNull();
-		Assertions.assertThat(result).isEqualTo(exampleDTO);
-		Assertions.assertThat(result).usingRecursiveComparison().isEqualTo(exampleDTO);
-
-		Mockito.verify(this.mockedRepo, Mockito.times(1)).save(Mockito.any(TaskDomain.class));
-		Mockito.verify(this.mapper, Mockito.times(1)).map(exampleTask, TaskDTO.class);
-
-	}
-
-```
 ### Integration Tests 
 Integration testing is a testing approach that targets the very fundamental building blocks of an application,
 the idea is to prove that each 'integration' of the application is functioning as expected.
@@ -199,6 +189,9 @@ We use [SemVer](http://semver.org/) for versioning.
 ## Authors
 
 * **Andi Berisha** 
+* **Adige Uraih ** 
+* **Claes Alfonso**
+* **Celina Basa **  
 
 ## License
 
@@ -208,5 +201,5 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 * **Savannah Vaithilingam**
-* **Alan Davis**
+
 
