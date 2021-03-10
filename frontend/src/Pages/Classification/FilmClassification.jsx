@@ -47,47 +47,26 @@ const FilmClassification = () => {
         )
     }
 
-
-
     return (
 
         <>
-
             <div className="Table">
-                <div className="col-md-6 " style={{ marginLeft: "302px", width: 700 }}>
+                <div className="col-md-6 " style={{ width: 700, marginLeft: 'auto', marginRight: 'auto', marginTop: '20px' }}>
                     <ReactBootStrap.Table striped bordered hover variant="dark">
                         <thead >
                             <tr style={{ color: "white" }}>
                                 <th className="DescriptionHeader">Classification</th>
                                 <th className="DescriptionHeader">Description</th>
-
-
                             </tr>
                         </thead>
                         <tbody>
                             {players.map(renderPlayer)}
-
-
                         </tbody>
                     </ReactBootStrap.Table>
-
-
-
-
-
                 </div>
             </div>
         </>
-
-
     )
-
-
-
-
-
-
-
 }
 
 export default FilmClassification;
