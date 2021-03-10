@@ -61,12 +61,6 @@ Testing Dependencies:
    "npm start" to start and run the application.
 
 
-To run the application from the command line, write the following command:
-
-```
-$java -jar ToDo_Project-0.0.1-SNAPSHOT.jar 
-```
-
 ## Running the tests
 To run the tests and view test coverage % for each class, open up the integrated terminal in VSCode and then cd into the back
 end. Once here, type "npm run coverage", all the tests will run and at the end you will be presented with a table illustrating the coverage
