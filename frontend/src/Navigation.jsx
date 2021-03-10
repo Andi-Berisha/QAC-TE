@@ -1,4 +1,3 @@
-'use strict';
 import React, { useState } from 'react';
 import {
     Collapse,
@@ -24,7 +23,7 @@ const Navigation = (props) => {
 
             <Navbar color="" dark expand="md">
                 <div className="container">
-                    <NavbarBrand href="/" ><img src="https://i.imgur.com/5laBfew.png" height='50px' width='123.5px' /></NavbarBrand>
+                    <NavbarBrand href="/" ><img src="https://i.imgur.com/5laBfew.png" alt="QAC LOGO" height='50px' width='123.5px' /></NavbarBrand>
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
                         <Nav className="mr-auto" navbar>
