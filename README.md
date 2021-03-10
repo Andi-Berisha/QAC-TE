@@ -3,7 +3,7 @@ Coverage: 81.01%
 
 
 # QA Cinema Web Application Project
-This project involved the design and creation of a Cinema web application. The project employed crud functionality to allow users to book, discuss and pay for cinema tickets at various venues of our establishment. The discussion board allows user to rate movies and interact with fellow movie goers by allowing users to post comments and reviews. 
+This project involved the design and creation of a Cinema web application. The project employed crud functionality to allow users to book, discuss and pay for cinema tickets for various venues of our establishment. Moreover, the discussion board enables users to rate movies and interact with fellow movie goers through the use of comment and review fields on the page.
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
