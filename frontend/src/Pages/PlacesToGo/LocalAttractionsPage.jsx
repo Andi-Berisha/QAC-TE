@@ -1,4 +1,4 @@
-import { Row, Col, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, CardHeader } from 'reactstrap';
+import { Row, Col, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 const LocalAttractionsPage = () => {
 
