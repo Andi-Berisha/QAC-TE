@@ -13,6 +13,8 @@ You will need the following softwares to run this application and all of its tes
 
 Visual Studio Code: https://code.visualstudio.com/
 
+Mongo DB: https://www.mongodb.com/products/compass
+
 The following dependencies from NPMJS.com:
 
 Front End Dependencies:
