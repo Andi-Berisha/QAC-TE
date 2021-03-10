@@ -108,11 +108,11 @@ describe(`Bookings Routes`, () => {
 
 
 ## Deployment
-1. Go to project folder and open cmd line.
-2. Type: mvn clean package
-3. cd into the target folder of the project
-4. then type $java -jar ToDo_Project-0.0.1-SNAPSHOT.jar 
-5. Access the front end by going to http://127.0.0.1:8081/HTML/Andi/Index.html
+1. Go to project folder and open it in VSCODE.
+2. Open an integrated terminal on VSCODE.
+3. cd into the front-end and back-end folders of the project.
+4. Then run the "npm start command" for each respective folder.
+5. A fully functional front-end should then automatically open up on your web browser.
 
 
 
