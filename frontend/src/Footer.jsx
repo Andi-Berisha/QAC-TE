@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { MDBCol, MDBContainer } from "mdbreact";
 import {
 
   Navbar
@@ -14,13 +14,13 @@ const Footer = () => {
           <MDBContainer fluid className="text-center ">
 
             <MDBCol>
-              <a href="#" style={{ color: "white" }}>Film Classification</a>
+              <a href="/FilmClassifications" style={{ color: "white" }}>Film Classification</a>
             </MDBCol>
             <MDBCol>
-              <a href="#!" style={{ color: "white" }}>Socials</a>
+              <a href="/localAttractions" style={{ color: "white" }}>Local Attractions</a>
             </MDBCol>
             <MDBCol>
-              <a href="#!" style={{ color: "white" }}>About Us</a>
+              <a href="/aboutUs" style={{ color: "white" }}>About Us</a>
             </MDBCol>
             <MDBCol>
               <a href="/contactUs" style={{ color: "white" }}>Contact Us</a>
@@ -29,7 +29,8 @@ const Footer = () => {
           </MDBContainer>
           <div className="footer-copyright text-center py-3">
           </div>
-
+ 
+  
 
         </div>
       </Navbar>

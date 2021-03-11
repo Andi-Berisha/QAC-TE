@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="container" >
 
-      <h5 style={{ color: "white" }}>Welcome to QA Cinemas!</h5>
+      <h3 style={{ color: "white", marginBottom: '20px', marginTop: '10px' }} className="text-center">Welcome to QA Cinemas!</h3>
 
       <BasicFilm height={400}>
         <img alt="Avenger:Endgame" src="https://i.imgur.com/VmLLlbK.jpg" height={400} />
@@ -21,10 +21,10 @@ const Home = () => {
         <img alt="Iron Man 3" src="https://i.imgur.com/sYIlBfm.jpg" height={400} />
       </BasicFilm>
 
-      
-      <div class="container" >
-        <div class="center">
-          <Button color="secondary" style={{marginLeft:490}}>Book Tickets</Button>{' '}
+
+      <div className="container" >
+        <div className="center">
+          <Button href="/bookings" color="secondary" style={{ margin: '0 auto', display: 'block', marginTop: '10px', width: '150px' }}>Book Tickets</Button>{' '}
         </div>
       </div>
     </div>

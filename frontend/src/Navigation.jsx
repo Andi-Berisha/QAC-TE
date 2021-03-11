@@ -1,4 +1,3 @@
-'use strict';
 import React, { useState } from 'react';
 import {
     Collapse,
@@ -20,47 +19,47 @@ const Navigation = (props) => {
 
     return (
         <>
-        
+
 
             <Navbar color="" dark expand="md">
-            <div className="container">
-                <NavbarBrand href="/" ><img src="https://i.imgur.com/ZNczDfU.png" height='50px' width='83px' /></NavbarBrand>
-                <NavbarToggler onClick={toggle} />
-                <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
-                        <NavItem>
-                            <NavLink>
-                                <Link to="/whatsOn" style={{ color: "white" }}>What's On</Link>
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink>
-                                <Link to="/screens" style={{ color: "white" }}>Screens</Link>
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink>
-                                <Link to="/discussionBoard" style={{ color: "white" }}>Discussion Board</Link>
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink>
-                                <Link to="/openingTimes" style={{ color: "white" }}>Opening Times</Link>
-                            </NavLink>
-                        </NavItem>
-                    </Nav>
-                </Collapse>
+                <div className="container">
+                    <NavbarBrand href="/" ><img src="https://i.imgur.com/5laBfew.png" alt="QAC LOGO" height='50px' width='123.5px' /></NavbarBrand>
+                    <NavbarToggler onClick={toggle} />
+                    <Collapse isOpen={isOpen} navbar>
+                        <Nav className="mr-auto" navbar>
+                            <NavItem>
+                                <NavLink>
+                                    <Link to="/whatsOn" style={{ color: "white" }}>What's On</Link>
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink>
+                                    <Link to="/screens" style={{ color: "white" }}>Screens</Link>
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink>
+                                    <Link to="/discussionBoard" style={{ color: "white" }}>Discussion Board</Link>
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink>
+                                    <Link to="/openingTimes" style={{ color: "white" }}>Opening Times</Link>
+                                </NavLink>
+                            </NavItem>
+                        </Nav>
+                    </Collapse>
                 </div>
             </Navbar>
 
-           
 
-            
-            
 
-            </>        
-      )
-    }
+
+
+
+        </>
+    )
+}
 
 
 export default Navigation;

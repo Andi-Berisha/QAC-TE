@@ -1,5 +1,7 @@
 {
     "DB_URL": "mongodb+srv://celinaqa:teamextra123@cluster0.kqn6m.mongodb.net",
     "DB_NAME": "DiscussionBoard",
-    "DISCUSSION_URL": "/Discussion"
+    "DISCUSSION_URL": "/Discussion",
+    "BOOKINGS_URL": "/Bookings",
+    "STRIPE_URL": "/Stripe"
 }

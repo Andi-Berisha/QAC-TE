@@ -12,7 +12,7 @@ const MovieList = ({ movie }) => {
                     <h4 className="mt-0">
                         {movie.Title}
                         <Badge color="warning" pill style={{ marginLeft: '15px' }}>
-                            <Link to="/filmClassification" style={{ color: 'black' }}>{movie.Rating}</Link>
+                            <Link to="/FilmClassifications" style={{ color: 'black' }}>{movie.Rating}</Link>
                         </Badge>
                     </h4>
 
@@ -21,7 +21,7 @@ const MovieList = ({ movie }) => {
                     <p><small>Directors: {movie.Directors}</small></p>
 
                     <Button >
-                        <Link to={{ pathname: `/bookingsPage/${movie.Title}` }} style={{ color: 'white' }}>Book Now</Link>
+                        <Link to={{ pathname: `/bookings/` }} style={{ color: 'white' }}>Book Now</Link>
                     </Button>
 
                 </div>

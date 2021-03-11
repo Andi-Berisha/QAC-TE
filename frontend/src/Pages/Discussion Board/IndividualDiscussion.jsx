@@ -1,4 +1,4 @@
-import { Toast, ToastBody, ToastHeader, ToastFooter } from "reactstrap";
+import { Toast, ToastBody, ToastHeader } from "reactstrap";
 
 
 
